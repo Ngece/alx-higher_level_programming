@@ -1,4 +1,7 @@
+#!/usr/bin/python3
+
 """Defines a class Student."""
+
 
 class Student:
     """Represent a student."""
@@ -16,6 +19,4 @@ class Student:
 
     def to_json(self):
         """Get a dictionary representation of the Student."""
-        return self.__dict__#!/usr/bin/python3
-
-
+        return self.__dict__
