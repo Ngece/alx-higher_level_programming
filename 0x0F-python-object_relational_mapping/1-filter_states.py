@@ -8,8 +8,7 @@ from sys import argv
 
 if __name__ == '__main__':
     """
-    Access to the database and get the states
-    from the database.
+    Access database and print states starting with the letter N.
     """
     db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
 
