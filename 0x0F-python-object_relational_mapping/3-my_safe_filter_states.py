@@ -17,5 +17,4 @@ if __name__ == '__main__':
     r = cursor.fetchall()
 
     for row in r:
-        if row[1] == sys.argv[4]
-            print(row)
+        print(row)
