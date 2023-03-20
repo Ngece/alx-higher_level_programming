@@ -11,9 +11,9 @@ if __name__ == '__main__':
     access database and print the states
     """
 
-    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.arg[3])
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     cur = db.cursor()
-    cur.execute("SELECT * FROM states")
+    cur.execute("SELECT * FROM states ORDER BY id")
     r = cur.fetchall()
 
    for row in r:
