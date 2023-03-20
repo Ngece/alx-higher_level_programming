@@ -8,12 +8,12 @@ from sys import argv
 
 if __name__ == '__main__':
     """
-    Access database and print state that matches the argument given.
+    Access database and print state that matches the argument given but safe from an sql injection.
     """
     db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
 
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
+    cursor.execute("SELECT * FROM states WHERE BINARY %(name)s ORDER BY states.id ASC")
     r = cursor.fetchall()
 
     for row in r:
