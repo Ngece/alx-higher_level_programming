@@ -8,7 +8,7 @@ from sys import argv
 
 if __name__ == '__main__':
     """
-    Access database and print state that matches the argument given but safe from an sql injection.
+    Access database and print all cities from cities table.
     """
     db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
 
